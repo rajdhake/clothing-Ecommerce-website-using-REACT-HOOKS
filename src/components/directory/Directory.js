@@ -42,8 +42,8 @@ function Directory() {
         <div className='directory-menu'>
             {
                 sections.map(x=> 
-                <MenuItem key={x.id}  title={x.title} imageUrl={x.imageUrl} size={x.size} /> )
-            }
+                <MenuItem key={x.id}  title={x.title} imageUrl={x.imageUrl} size={x.size}  linkUrl={x.linkUrl} /> )
+            } //this 'history' is for routing
         </div>
     )
 }
