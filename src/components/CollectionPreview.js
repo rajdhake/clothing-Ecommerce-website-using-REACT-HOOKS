@@ -1,4 +1,4 @@
-import React,{useEffect,useState} from 'react'
+import React from 'react'
 import './CollectionPreview.scss'
 import CollectionItem from './CollectionItem'
 
@@ -12,8 +12,8 @@ function CollectionPreview(props) {
                 {
                 props.items
                 .filter((x,idx) => idx<4)
-                .map(({id, ...otherItemProps})=>
-                    <CollectionItem key ={id} {...otherItemProps} />         
+                .map((x)=>
+                    <CollectionItem key ={x.id} item={x} />         
                      )
                 }
             </div>

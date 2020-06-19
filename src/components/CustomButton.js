@@ -2,9 +2,9 @@ import React from 'react'
 import './CustomButton.scss'
 
 
-function CustomButton({children, isGoogleSignIn, ...otherProps}) {
+function CustomButton({children, isGoogleSignIn, inverted, ...otherProps}) {
     return (
-        <button className='custom-button' {...otherProps}>
+        <button className={`${inverted? 'inverted': ''} custom-button`} {...otherProps}>
              {children} 
         </button>
     )
