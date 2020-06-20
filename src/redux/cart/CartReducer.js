@@ -17,7 +17,14 @@ const CartReducer =(state= initialState, action) =>{
             cartItems :addItem(state.cartItems, action.payload)
         }
 
-        default: return state
+        case 'CLEAR_ITEM_FROM_CART' : return {
+            ...state,
+            cartItems: state.cartItems.filter(
+               x=>x.id  !== action.payload.id
+            )
+        }
+
+        default: return state 
     }
 }
 export default CartReducer;
